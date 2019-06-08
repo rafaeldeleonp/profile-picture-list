@@ -6,7 +6,7 @@ import './index.scss';
 
 ReactDOM.render(
   <StrictMode>
-    <App />,
+    <App />
   </StrictMode>,
   document.getElementById('root'),
 );
