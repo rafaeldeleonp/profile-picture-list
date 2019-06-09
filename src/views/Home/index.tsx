@@ -1,5 +1,8 @@
 import './style.scss';
 import React, { memo, useState, useEffect } from 'react';
+import SVG from 'react-inlinesvg';
+import ThreeDots from '../../resources/svg/logo-three-dots.svg';
+import UserInfo from '../../components/UserInfo';
 import ImageList from '../../components/ImageList';
 import Modal from '../../components/Modal';
 import { InitialState } from './home-definitions';
@@ -177,13 +180,28 @@ function Home() {
 
   return (
     <div className="home">
-      <div>
-        <ImageList
-          data={DATA}
-          itemCount={DATA.length / 3}
-          loadMoreItems={loadMoreItems}
-        />
+      <UserInfo
+        picture="/images/profile.png"
+        name="rafael de leon"
+        username="@rafaeldleonp"
+        posts={50}
+        followers={125}
+        description="Software developer. Really passionate in web developing. Can make response websites pixel perfect."
+      />
+      <div className="list-header-container">
+        <div className="list-header-content">
+          <span className="dot" style={{ backgroundColor: '#46f0f0' }} />
+          <span className="dot" style={{ backgroundColor: '#f032e6' }} />
+          <span className="dot" style={{ backgroundColor: '#ffe119' }} />
+          <h1>posts</h1>
+          <span className="dot" style={{ backgroundColor: '#000000' }} />
+        </div>
       </div>
+      <ImageList
+        data={DATA}
+        itemCount={DATA.length / 3}
+        loadMoreItems={loadMoreItems}
+      />
       {showModal && (
         <Modal
           show={showModal}

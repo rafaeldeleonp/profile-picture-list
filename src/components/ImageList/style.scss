@@ -1,4 +1,10 @@
 .image-list {
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
+
   .images-container {
     display: inline-flex;
     justify-content: center;

@@ -1,11 +1,9 @@
 import './style.scss';
-import React, { useState } from 'react';
-import { FixedSizeList as List } from 'react-window';
-import InfiniteLoader from 'react-window-infinite-loader';
-import { AutoSizer } from 'react-virtualized';
-import omit from 'lodash/omit';
+import React from 'react';
+import { List, WindowScroller, AutoSizer } from 'react-virtualized';
+import Image from '../Image';
 
-const IMAGE_SIZE = 294;
+const IMAGE_SIZE = 300;
 const MARGIN_BOTTOM = 28;
 
 interface Image {
@@ -19,77 +17,69 @@ interface ImageListProps {
   loadMoreItems(startIndex: number, stopIndex: number): void;
 }
 
-interface AutoSizerProps {
-  width: number;
+interface WindowScrollerProps {
   height: number;
 }
 
-function ImageList({ data, itemCount, loadMoreItems }: ImageListProps) {
-  const [dataStatus, setDataStatus] = useState([]);
+interface AutoSizerProps {
+  width: number;
+}
 
-  const isItemLoaded = (index: number) => {
-    console.log('DATA iNDEX', index, data[index]);
-    const status = [];
+function ImageList({ data, itemCount, loadMoreItems }: ImageListProps) {
+  // const [dataStatus, setDataStatus] = useState([]);
+
+  // const isItemLoaded = (index: number) => {
+  //   console.log('DATA iNDEX', index, data[index]);
+  //   const status = [];
+  //   const fromIndex = index * 3;
+  //   const toIndex = Math.min(fromIndex + 3, data.length);
+  //   const isLoaded = index <= data.length - 1;
+
+  //   for (let i = fromIndex; i < toIndex; i++) {
+  //     const isLoaded = index <= data.length - 1;
+
+  //     status.push();
+  //   }
+
+  //   return isLoaded;
+  // };
+
+  const rowRenderer = ({ index, style }: any) => {
+    const items = [];
     const fromIndex = index * 3;
     const toIndex = Math.min(fromIndex + 3, data.length);
-    const isLoaded = index <= data.length - 1;
 
     for (let i = fromIndex; i < toIndex; i++) {
-      const isLoaded = index <= data.length - 1;
-
-      status.push();
+      items.push(
+        <Image src={data[i].width480} width={IMAGE_SIZE} height={IMAGE_SIZE} />,
+      );
     }
 
-    return isLoaded;
+    return (
+      <div className="images-container" style={style}>
+        {items}
+      </div>
+    );
   };
 
   return (
-    <AutoSizer>
-      {({ width, height }: AutoSizerProps) => (
-        // <InfiniteLoader
-        //   isItemLoaded={isItemLoaded}
-        //   itemCount={itemCount}
-        //   minimumBatchSize={15}
-        //   loadMoreItems={loadMoreItems}
-        // >
-        //   {({ onItemsRendered, ref }: any) => (
-        <List
-          // ref={ref}
-          className="image-list"
-          width={width}
-          height={height}
-          itemCount={itemCount}
-          itemSize={IMAGE_SIZE + MARGIN_BOTTOM}
-          // onItemsRendered={onItemsRendered}
-        >
-          {({ index, style }: any) => {
-            const items = [];
-            const fromIndex = index * 3;
-            const toIndex = Math.min(fromIndex + 3, data.length);
-
-            for (let i = fromIndex; i < toIndex; i++) {
-              items.push(
-                <img
-                  className="img"
-                  src={data[i].width480}
-                  alt="La otra foto"
-                  width={IMAGE_SIZE}
-                  height={IMAGE_SIZE}
-                />,
-              );
-            }
-
-            return (
-              <div className="images-container" style={style}>
-                {items}
-              </div>
-            );
-          }}
-        </List>
+    <WindowScroller>
+      {({ height }: WindowScrollerProps) => (
+        <AutoSizer disabledHeight={true}>
+          {({ width }: AutoSizerProps) => (
+            <List
+              className="image-list"
+              autoHeight={true}
+              width={width}
+              height={height}
+              rowCount={itemCount}
+              rowHeight={IMAGE_SIZE + MARGIN_BOTTOM}
+              rowRenderer={rowRenderer}
+            ></List>
+          )}
+        </AutoSizer>
       )}
-      {/* </InfiniteLoader>
-      )} */}
-    </AutoSizer>
+    </WindowScroller>
   );
 }
 

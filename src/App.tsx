@@ -9,7 +9,7 @@ function App() {
   return (
     <React.Fragment>
       <header className="app-header">
-        <SVG src={LogoWhite} />
+        <SVG className="logo" src={LogoWhite} />
       </header>
       <div className="app-body">
         <Suspense fallback={<LinearProgress />}>

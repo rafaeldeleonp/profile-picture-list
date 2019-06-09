@@ -1,0 +1,120 @@
+.user-profile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  .profile-img-container {
+    display: flex;
+    width: 12%;
+    margin-right: 20px;
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+
+  .user-info {
+    width: 30%;
+
+    .username-container {
+      margin-bottom: 16px;
+
+      .name {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 600;
+        color: #000000;
+        text-transform: capitalize;
+      }
+
+      .username {
+        font-size: 14px;
+        font-weight: 600;
+        color: #808080;
+      }
+    }
+
+    .stadistics-container {
+      display: flex;
+      flex-direction: row;
+
+      .posts-container,
+      .followers-container {
+        width: 40%;
+
+        .number {
+          font-size: 28px;
+          font-weight: 600;
+          color: #000000;
+          margin-right: 8px;
+        }
+
+        .label {
+          font-size: 20px;
+          color: #333333;
+        }
+      }
+    }
+
+    .description-container {
+      p {
+        font-size: 18px;
+        color: #333333;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .user-profile {
+    margin-bottom: 20px;
+    justify-content: initial;
+
+    .profile-img-container {
+      width: 40%;
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+      }
+    }
+
+    .user-info {
+      width: 60%;
+
+      .username-container {
+        margin-bottom: 16px;
+      }
+
+      .stadistics-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: unset;
+
+        .posts-container {
+          margin-right: 10px;
+        }
+
+        .posts-container,
+        .followers-container {
+          .number {
+            font-size: 20px;
+            margin-right: 8px;
+          }
+
+          .label {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .description-container {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
