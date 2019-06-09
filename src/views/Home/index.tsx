@@ -1,5 +1,7 @@
 import './style.scss';
 import React, { memo, useState, useEffect } from 'react';
+import SVG from 'react-inlinesvg';
+import LogoThreeDots from '../../resources/svg/logo-three-dots.svg';
 import UserInfo from '../../components/UserInfo';
 import ImageList from '../../components/ImageList';
 import Modal from '../../components/Modal';
@@ -42,66 +44,98 @@ const DATA = [
   {
     preview: 'https://media0.giphy.com/media/4PJTK4kgNXgiI/100_s.gif',
     width480: 'https://media2.giphy.com/media/4PJTK4kgNXgiI/480w_s.jpg',
+    likes: 5,
+    comments: 33,
   },
   {
     preview: 'https://media0.giphy.com/media/UAQut6DhqasaQ/100_s.gif',
     width480: 'https://media3.giphy.com/media/UAQut6DhqasaQ/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/xTiTnFtDzaTqw7D2Io/100_s.gif',
     width480: 'https://media4.giphy.com/media/xTiTnFtDzaTqw7D2Io/480w_s.jpg',
+    likes: 55,
+    comments: 1,
   },
   {
     preview: 'https://media0.giphy.com/media/F6I9NoTZQps40/100_s.gif',
     width480: 'https://media3.giphy.com/media/F6I9NoTZQps40/480w_s.jpg',
+    likes: 20,
+    comments: 3,
   },
   {
     preview: 'https://media0.giphy.com/media/bfd8hxbntgfBu/100_s.gif',
     width480: 'https://media0.giphy.com/media/bfd8hxbntgfBu/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/W2IWzXp4gemfS/100_s.gif',
     width480: 'https://media4.giphy.com/media/W2IWzXp4gemfS/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/BBf9D5OT3gc00/100_s.gif',
     width480: 'https://media3.giphy.com/media/BBf9D5OT3gc00/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/zu1AaqdB5LBks/100_s.gif',
     width480: 'https://media3.giphy.com/media/zu1AaqdB5LBks/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media1.giphy.com/media/13hjj7WhRIEcQo/100_s.gif',
     width480: 'https://media0.giphy.com/media/13hjj7WhRIEcQo/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media0.giphy.com/media/H7NXpSiEmGqgE/100_s.gif',
     width480: 'https://media0.giphy.com/media/H7NXpSiEmGqgE/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/S7jKEqmTbee7S/100_s.gif',
     width480: 'https://media3.giphy.com/media/S7jKEqmTbee7S/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/xA9yMCr2cT2a4/100_s.gif',
     width480: 'https://media0.giphy.com/media/xA9yMCr2cT2a4/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media1.giphy.com/media/TeXVQ0AFBukqA/100_s.gif',
     width480: 'https://media2.giphy.com/media/TeXVQ0AFBukqA/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/iJDLBX5GY8niCpZYkR/100_s.gif',
     width480: 'https://media4.giphy.com/media/iJDLBX5GY8niCpZYkR/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/3kcZBP33hHbhu/100_s.gif',
     width480: 'https://media4.giphy.com/media/3kcZBP33hHbhu/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
   {
     preview: 'https://media3.giphy.com/media/3kcZBP33hHbhu/100_s.gif',
     width480: 'https://media4.giphy.com/media/3kcZBP33hHbhu/480w_s.jpg',
+    likes: 15,
+    comments: 40,
   },
 ];
 
@@ -188,9 +222,7 @@ function Home() {
       />
       <div className="list-header-container">
         <div className="list-header-content">
-          <span className="dot" style={{ backgroundColor: '#46f0f0' }} />
-          <span className="dot" style={{ backgroundColor: '#f032e6' }} />
-          <span className="dot" style={{ backgroundColor: '#ffe119' }} />
+          <SVG className="three-dots-logo" src={LogoThreeDots} />
           <h1>posts</h1>
           <span className="dot" style={{ backgroundColor: '#000000' }} />
         </div>

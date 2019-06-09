@@ -4,15 +4,18 @@ import classnames from 'classnames';
 import SVG from 'react-inlinesvg';
 import CommentSvg from '../../resources/svg/comment.svg';
 import LikeSvg from '../../resources/svg/like.svg';
+import LogoThreeDots from '../../resources/svg/logo-three-dots.svg';
 
 interface ImageProps {
   src: string;
   width: number;
   height: number;
+  likes: number;
+  comments: number;
 }
 
-function Image({ src, width, height }: ImageProps) {
-  const [isHovering, setHover] = useState(true);
+function Image({ src, width, height, likes, comments }: ImageProps) {
+  const [isHovering, setHover] = useState(false);
   const cls = classnames({
     overlay: isHovering,
   });
@@ -22,7 +25,7 @@ function Image({ src, width, height }: ImageProps) {
   };
 
   const handleMouseLeave = () => {
-    // setHover(false);
+    setHover(false);
   };
 
   return (
@@ -50,12 +53,15 @@ function Image({ src, width, height }: ImageProps) {
           <div className="icon-container">
             <div className="like-container">
               <SVG className="img-svg like-icon" src={LikeSvg} />
-              <span className="label">10</span>
+              <span className="label">{likes}</span>
             </div>
             <div className="comment-container">
               <SVG className="img-svg comment-icon" src={CommentSvg} />
-              <span className="label">100</span>
+              <span className="label">{comments}</span>
             </div>
+          </div>
+          <div className="img-watermark">
+            <SVG className="logo" src={LogoThreeDots} />
           </div>
         </div>
       )}

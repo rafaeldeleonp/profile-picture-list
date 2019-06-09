@@ -9,6 +9,8 @@ const MARGIN_BOTTOM = 28;
 interface Image {
   width480: string;
   preview: string;
+  likes: number;
+  comments: number;
 }
 
 interface ImageListProps {
@@ -51,7 +53,13 @@ function ImageList({ data, itemCount, loadMoreItems }: ImageListProps) {
 
     for (let i = fromIndex; i < toIndex; i++) {
       items.push(
-        <Image src={data[i].width480} width={IMAGE_SIZE} height={IMAGE_SIZE} />,
+        <Image
+          src={data[i].width480}
+          width={IMAGE_SIZE}
+          height={IMAGE_SIZE}
+          likes={data[i].likes}
+          comments={data[i].comments}
+        />,
       );
     }
 
