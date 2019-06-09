@@ -1,6 +1,9 @@
 import './style.scss';
 import React, { useState } from 'react';
 import classnames from 'classnames';
+import SVG from 'react-inlinesvg';
+import CommentSvg from '../../resources/svg/comment.svg';
+import LikeSvg from '../../resources/svg/like.svg';
 
 interface ImageProps {
   src: string;
@@ -9,7 +12,7 @@ interface ImageProps {
 }
 
 function Image({ src, width, height }: ImageProps) {
-  const [isHovering, setHover] = useState(false);
+  const [isHovering, setHover] = useState(true);
   const cls = classnames({
     overlay: isHovering,
   });
@@ -19,7 +22,7 @@ function Image({ src, width, height }: ImageProps) {
   };
 
   const handleMouseLeave = () => {
-    setHover(false);
+    // setHover(false);
   };
 
   return (
@@ -39,6 +42,23 @@ function Image({ src, width, height }: ImageProps) {
         style={{ width: `${width}px`, height: `${height}px` }}
         className={cls}
       />
+      {isHovering && (
+        <div
+          className="icons-overlay-container"
+          style={{ width: `${width}px`, height: `${height}px` }}
+        >
+          <div className="icon-container">
+            <div className="like-container">
+              <SVG className="img-svg like-icon" src={LikeSvg} />
+              <span className="label">10</span>
+            </div>
+            <div className="comment-container">
+              <SVG className="img-svg comment-icon" src={CommentSvg} />
+              <span className="label">100</span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

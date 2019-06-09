@@ -1,7 +1,5 @@
 import './style.scss';
 import React, { memo, useState, useEffect } from 'react';
-import SVG from 'react-inlinesvg';
-import ThreeDots from '../../resources/svg/logo-three-dots.svg';
 import UserInfo from '../../components/UserInfo';
 import ImageList from '../../components/ImageList';
 import Modal from '../../components/Modal';
@@ -186,7 +184,7 @@ function Home() {
         username="@rafaeldleonp"
         posts={50}
         followers={125}
-        description="Software developer. Really passionate in web developing. Can make response websites pixel perfect."
+        description="Software developer. Really passionate in web developing. Can make pixel perfect responsive websites."
       />
       <div className="list-header-container">
         <div className="list-header-content">
