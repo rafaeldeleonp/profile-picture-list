@@ -1,0 +1,15 @@
+.image-list {
+  .images-container {
+    display: inline-flex;
+    justify-content: center;
+
+    .img {
+      display: flex;
+      margin-right: 28px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
