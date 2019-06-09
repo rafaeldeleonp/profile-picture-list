@@ -12,11 +12,16 @@ interface ImageProps {
   height: number;
   likes: number;
   comments: number;
+  onClick(): void;
 }
 
-function Image({ src, width, height, likes, comments }: ImageProps) {
+function Image({ src, width, height, likes, comments, onClick }: ImageProps) {
   const [isHovering, setHover] = useState(false);
-  const cls = classnames({
+  const [isLoading, setLoading] = useState(true);
+  const imgCls = classnames('img', {
+    'is-loading': isLoading,
+  });
+  const overlayCls = classnames({
     overlay: isHovering,
   });
 
@@ -28,22 +33,32 @@ function Image({ src, width, height, likes, comments }: ImageProps) {
     setHover(false);
   };
 
+  const handleClick = () => {
+    onClick();
+  };
+
+  const handleLoad = () => {
+    setLoading(false);
+  };
+
   return (
     <div
       className="image-wrapper"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       <img
-        className="img"
+        className={imgCls}
         src={src}
         alt="La otra foto"
         width={width}
         height={height}
+        onLoad={handleLoad}
       />
       <div
         style={{ width: `${width}px`, height: `${height}px` }}
-        className={cls}
+        className={overlayCls}
       />
       {isHovering && (
         <div

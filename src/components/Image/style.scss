@@ -1,6 +1,10 @@
 .image-wrapper {
   .img {
     object-fit: cover;
+
+    &.is-loading {
+      background-color: #eeeeee;
+    }
   }
 
   .overlay {

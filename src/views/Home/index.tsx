@@ -202,7 +202,7 @@ function Home() {
     // return fetchImages(offset, limit);
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+  const handleClick = () => {
     setModalState(true);
   };
 
@@ -230,6 +230,7 @@ function Home() {
       <ImageList
         data={DATA}
         itemCount={DATA.length / 3}
+        onClick={handleClick}
         loadMoreItems={loadMoreItems}
       />
       {showModal && (

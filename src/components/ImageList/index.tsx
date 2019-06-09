@@ -16,6 +16,7 @@ interface Image {
 interface ImageListProps {
   data: Image[];
   itemCount: number;
+  onClick(): void;
   loadMoreItems(startIndex: number, stopIndex: number): void;
 }
 
@@ -27,7 +28,12 @@ interface AutoSizerProps {
   width: number;
 }
 
-function ImageList({ data, itemCount, loadMoreItems }: ImageListProps) {
+function ImageList({
+  data,
+  itemCount,
+  onClick,
+  loadMoreItems,
+}: ImageListProps) {
   // const [dataStatus, setDataStatus] = useState([]);
 
   // const isItemLoaded = (index: number) => {
@@ -59,6 +65,7 @@ function ImageList({ data, itemCount, loadMoreItems }: ImageListProps) {
           height={IMAGE_SIZE}
           likes={data[i].likes}
           comments={data[i].comments}
+          onClick={onClick}
         />,
       );
     }
