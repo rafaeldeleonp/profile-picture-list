@@ -1,6 +1,6 @@
 import './style.scss';
-import React, { useState } from 'react';
-import classnames from 'classnames';
+import React from 'react';
+import ProfilePicture from '../ProfilePicture';
 
 interface UserInfoProps {
   name: string;
@@ -19,24 +19,10 @@ function UserInfo({
   description = '',
   hideStadistics = false,
 }: UserInfoProps) {
-  const [isLoading, setLoading] = useState(true);
-  const imgCls = classnames('profile-img', {
-    'is-loading': isLoading,
-  });
-
-  const handleLoad = () => {
-    setLoading(false);
-  };
-
   return (
     <div className="user-profile">
       <div className="profile-img-container">
-        <img
-          className={imgCls}
-          src="/images/profile.png"
-          alt="Profile"
-          onLoad={handleLoad}
-        />
+        <ProfilePicture src="/images/profile.png" />
       </div>
       <div className="user-info">
         <div className="username-container">

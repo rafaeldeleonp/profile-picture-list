@@ -51,9 +51,9 @@
     border-radius: 16px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     margin: 100px auto 0;
-    width: 774px;
+    width: 820px;
     height: 520px;
-    padding: 30px 45px 0 45px;
+    padding: 30px 2px 0 45px;
 
     .close-btn {
       position: absolute;
@@ -72,11 +72,12 @@
     .modal-content-body {
       height: calc(100% - 64px);
       display: flex;
-      align-items: center;
 
       .modal-img {
-        width: 400px;
-        height: 400px;
+        min-width: 456px;
+        width: 456px;
+        min-height: 456px;
+        height: 456px;
         object-fit: cover;
       }
     }

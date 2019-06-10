@@ -1,8 +1,7 @@
 import './style.scss';
 import React, { memo, useState, useEffect, useCallback } from 'react';
 import uuid from 'uuid';
-import SVG from 'react-inlinesvg';
-import LogoThreeDots from '../../resources/svg/logo-three-dots.svg';
+import classnames from 'classnames';
 import UserInfo from '../../components/UserInfo';
 import ListTitle from '../../components/ListTitle';
 import ImageList from '../../components/ImageList';
@@ -141,6 +140,9 @@ function Home() {
   const [images, setImages] = useState(INITIAL_STATE);
   const [showModal, setModalState] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const cls = classnames('home', {
+    'showing-modal': showModal,
+  });
 
   // const fetchImages = (offset: number = 0, limit: number = LIMIT) => {
   //   fetch(
@@ -219,7 +221,7 @@ function Home() {
   const isRightArrowDisabled = currentIndex === DATA.length - 1;
 
   return (
-    <div className="home">
+    <div className={cls}>
       <UserInfo
         name="rafael de leon"
         username="@rafaeldleonp"

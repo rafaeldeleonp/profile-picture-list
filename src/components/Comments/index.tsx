@@ -2,6 +2,7 @@ import './style.scss';
 import React from 'react';
 import UserInfo from '../UserInfo';
 import ListTitle from '../ListTitle';
+import Comment from './Comment';
 
 function Comments() {
   return (
@@ -13,8 +14,52 @@ function Comments() {
         followers={125}
         description="This is the description of the photo. Photo description pushes content below."
       />
-
       <ListTitle title="comments" />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
+      <Comment
+        profileSrc="/images/profile.png"
+        name="rafael de leon"
+        content="this is a long comment. Here you can see it is long"
+      />
     </div>
   );
 }

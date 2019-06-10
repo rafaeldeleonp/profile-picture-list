@@ -1,5 +1,6 @@
 .comments {
-  margin-left: 32px;
+  padding: 0 20px 0 32px;
+  overflow: auto;
 
   .user-profile {
     justify-content: unset;
@@ -31,6 +32,8 @@
   }
 
   .list-title-container {
+    margin-bottom: 20px;
+
     .title-header-content {
       .three-dots-logo {
         svg {
