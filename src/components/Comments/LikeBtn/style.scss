@@ -1,0 +1,23 @@
+.comment-like {
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke: black;
+    stroke-width: 40px;
+  }
+
+  &.is-like {
+    svg {
+      path {
+        fill: black;
+      }
+    }
+  }
+}

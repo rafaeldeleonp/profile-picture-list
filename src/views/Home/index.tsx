@@ -224,7 +224,7 @@ function Home() {
     <div className={cls}>
       <UserInfo
         name="rafael de leon"
-        username="@rafaeldleonp"
+        username="@rafaeldeleonp"
         posts={50}
         followers={125}
         description="Software developer. Really passionate in web developing. Can make pixel perfect responsive websites."

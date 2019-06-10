@@ -4,10 +4,10 @@
 
   .user-profile {
     justify-content: unset;
-    margin-bottom: 0;
+    margin-bottom: 24px;
 
     .profile-img-container {
-      margin-right: 12px;
+      margin-right: 20px;
 
       .profile-img {
         width: 60px;
@@ -32,7 +32,9 @@
   }
 
   .list-title-container {
+    justify-content: unset;
     margin-bottom: 20px;
+    padding-left: 72px;
 
     .title-header-content {
       .three-dots-logo {

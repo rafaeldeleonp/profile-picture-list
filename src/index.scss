@@ -26,15 +26,7 @@ body {
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
-    border-radius: 4px;
-    background: #e6e6e6;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #b9bcc0;
-    border-radius: 4px;
-    width: 10px;
+    width: 0px;
   }
 }
 
