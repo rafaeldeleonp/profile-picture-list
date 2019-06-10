@@ -13,10 +13,17 @@ export interface ContentProps {
   content: string;
   totalReplies?: number;
   counter?: number;
-  onRepliesClick?: () => void;
+  loadMoreReplies?: () => void;
 }
 
 export interface RepliesState {
+  replies: BaseCommentProps[];
+  clickCounter: number;
+  total: number;
+}
+
+export interface CommentsState {
+  comments: CommentProps[];
   clickCounter: number;
   total: number;
 }

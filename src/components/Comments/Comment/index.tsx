@@ -6,32 +6,38 @@ import LikeBtn from '../LikeBtn';
 import Reply from '../Reply';
 import { CommentProps, RepliesState } from '../comments-definitions';
 
-const REPLIES = 3;
+const REPLIES_LIMIT = 3;
 
 function Comment({ profileSrc, name, content, replies }: CommentProps) {
-  const [state, setState] = useState<RepliesState>({
+  const [replyState, setReplyState] = useState<RepliesState>({
+    replies: [],
     clickCounter: 0,
     total: replies.length,
   });
 
-  const handleRepliesClick = () => {
-    const value = state.total - REPLIES;
-    let total = state.total;
-    let counter = state.clickCounter;
+  const loadMoreReplies = () => {
+    const value = replyState.total - REPLIES_LIMIT;
+    let total = replyState.total;
+    let counter = replyState.clickCounter;
 
-    if (total === 0 && state.clickCounter > 0) {
+    if (total === 0 && replyState.clickCounter > 0) {
       total = replies.length;
       counter = 0;
     } else {
       total = value > 0 ? value : 0;
-      counter = state.clickCounter + 1;
+      counter = replyState.clickCounter + 1;
     }
 
-    setState({
+    const startIndex =
+      replyState.replies.length === 0 ? replies.length - REPLIES_LIMIT : total;
+
+    setReplyState({
+      replies: replies.slice(startIndex, replies.length),
       clickCounter: counter,
       total: total,
     });
   };
+
   return (
     <div className="comment">
       <div className="comment-wrapper">
@@ -39,15 +45,15 @@ function Comment({ profileSrc, name, content, replies }: CommentProps) {
         <Content
           name={name}
           content={content}
-          totalReplies={state.total}
-          counter={state.clickCounter}
-          onRepliesClick={handleRepliesClick}
+          totalReplies={replyState.total}
+          counter={replyState.clickCounter}
+          loadMoreReplies={loadMoreReplies}
         />
         <LikeBtn />
       </div>
-      {state.clickCounter > 0 && (
+      {replyState.clickCounter > 0 && (
         <div className="comment-replies-container">
-          {replies.map(reply => (
+          {replyState.replies.map(reply => (
             <Reply
               profileSrc={reply.profileSrc}
               name={reply.name}

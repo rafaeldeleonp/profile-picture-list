@@ -75,8 +75,6 @@ function Modal({
     setModalState({ ...state, loaded: true });
   };
 
-  console.log('CURRENT DATA', data);
-
   return (
     <div
       className={cls}

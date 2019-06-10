@@ -4,20 +4,18 @@ import SVG from 'react-inlinesvg';
 import ThreeDotsLogo from '../../../resources/svg/logo-three-dots.svg';
 import { ContentProps } from '../comments-definitions';
 
-const REPLIES = 3;
-
 function Content({
   name,
   content,
   totalReplies = 0,
   counter = 0,
-  onRepliesClick,
+  loadMoreReplies,
 }: ContentProps) {
   return (
     <div className="content-wrapper">
       <div className="content-username">{name}</div>
       <p className="content-message">{content}</p>
-      <button className="content-replies-btn" onClick={onRepliesClick}>
+      <button className="content-replies-btn" onClick={loadMoreReplies}>
         {(totalReplies > 0 || counter > 0) && (
           <SVG className="three-dots-logo" src={ThreeDotsLogo} />
         )}

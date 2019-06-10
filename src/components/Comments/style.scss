@@ -53,4 +53,22 @@
       }
     }
   }
+
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+
+    .load-more-btn {
+      &:hover {
+        cursor: pointer;
+      }
+
+      .load-more-icon {
+        svg {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
 }
