@@ -3,21 +3,21 @@ import React, { useState } from 'react';
 import classnames from 'classnames';
 
 interface UserInfoProps {
-  picture: string;
   name: string;
   username: string;
-  posts: number;
-  followers: number;
+  posts?: number;
+  followers?: number;
   description?: string;
+  hideStadistics?: boolean;
 }
 
 function UserInfo({
-  picture,
   name,
   username,
-  posts,
-  followers,
+  posts = 0,
+  followers = 0,
   description = '',
+  hideStadistics = false,
 }: UserInfoProps) {
   const [isLoading, setLoading] = useState(true);
   const imgCls = classnames('profile-img', {
@@ -33,7 +33,7 @@ function UserInfo({
       <div className="profile-img-container">
         <img
           className={imgCls}
-          src={picture}
+          src="/images/profile.png"
           alt="Profile"
           onLoad={handleLoad}
         />
@@ -43,16 +43,18 @@ function UserInfo({
           <div className="name">{name}</div>
           <div className="username">{username}</div>
         </div>
-        <div className="stadistics-container">
-          <div className="posts-container">
-            <span className="number">{posts}</span>
-            <span className="label">posts</span>
+        {hideStadistics && (
+          <div className="stadistics-container">
+            <div className="posts-container">
+              <span className="number">{posts}</span>
+              <span className="label">posts</span>
+            </div>
+            <div className="followers-container">
+              <span className="number">{followers}</span>
+              <span className="label">followers</span>
+            </div>
           </div>
-          <div className="followers-container">
-            <span className="number">{followers}</span>
-            <span className="label">followers</span>
-          </div>
-        </div>
+        )}
         <div className="description-container">
           <p>{description}</p>
         </div>

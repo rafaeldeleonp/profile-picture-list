@@ -5,8 +5,7 @@
 
   .profile-img-container {
     display: flex;
-    width: 12%;
-    margin-right: 20px;
+    margin-right: 40px;
 
     .profile-img {
       width: 200px;
@@ -20,7 +19,7 @@
   }
 
   .user-info {
-    width: 30%;
+    width: 40%;
 
     .username-container {
       margin-bottom: 16px;
@@ -29,7 +28,6 @@
         font-size: 20px;
         line-height: 28px;
         font-weight: 600;
-        color: #000000;
         text-transform: capitalize;
       }
 
@@ -51,7 +49,6 @@
         .number {
           font-size: 28px;
           font-weight: 600;
-          color: #000000;
           margin-right: 8px;
         }
 
@@ -71,17 +68,49 @@
   }
 }
 
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .user-profile {
+    .profile-img-container {
+      .profile-img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    .user-info {
+      width: 60%;
+
+      .stadistics-container {
+        .posts-container,
+        .followers-container {
+          .number {
+            font-size: 24px;
+          }
+
+          .label {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .description-container {
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .user-profile {
     margin-bottom: 20px;
     justify-content: initial;
 
     .profile-img-container {
-      width: 40%;
       .profile-img {
         width: 120px;
         height: 120px;
-        border-radius: 50%;
       }
     }
 
@@ -93,19 +122,10 @@
       }
 
       .stadistics-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: unset;
-
-        .posts-container {
-          margin-right: 10px;
-        }
-
         .posts-container,
         .followers-container {
           .number {
             font-size: 20px;
-            margin-right: 8px;
           }
 
           .label {

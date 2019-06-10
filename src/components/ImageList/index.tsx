@@ -2,31 +2,14 @@ import './style.scss';
 import React from 'react';
 import { List, WindowScroller, AutoSizer } from 'react-virtualized';
 import Image from '../Image';
+import {
+  ImageListProps,
+  WindowScrollerProps,
+  AutoSizerProps,
+} from './imagelist-definitions';
 
 const IMAGE_SIZE = 300;
 const MARGIN_BOTTOM = 28;
-
-interface Image {
-  width480: string;
-  preview: string;
-  likes: number;
-  comments: number;
-}
-
-interface ImageListProps {
-  data: Image[];
-  itemCount: number;
-  onClick(): void;
-  loadMoreItems(startIndex: number, stopIndex: number): void;
-}
-
-interface WindowScrollerProps {
-  height: number;
-}
-
-interface AutoSizerProps {
-  width: number;
-}
 
 function ImageList({
   data,
@@ -60,6 +43,7 @@ function ImageList({
     for (let i = fromIndex; i < toIndex; i++) {
       items.push(
         <Image
+          id={data[i].id}
           src={data[i].width480}
           width={IMAGE_SIZE}
           height={IMAGE_SIZE}

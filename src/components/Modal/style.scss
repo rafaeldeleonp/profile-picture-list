@@ -1,4 +1,7 @@
 .modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -6,139 +9,86 @@
   z-index: 1500;
 
   &.back-drop {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
     transition: all 0.4s;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .left-btn {
+    left: 15%;
+  }
+
+  .right-btn {
+    right: 15%;
+  }
+
+  .left-btn,
+  .right-btn {
+    position: absolute;
+    top: 50%;
+
+    .isvg {
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: white;
+      }
+    }
   }
 
   .modal-content {
     position: relative;
     background: white;
-    border-radius: 4px;
+    border-radius: 16px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     margin: 100px auto 0;
-    width: 700px;
-    height: 525px;
-    padding: 8px;
+    width: 774px;
+    height: 520px;
+    padding: 30px 45px 0 45px;
 
     .close-btn {
       position: absolute;
-      top: -12px;
-      right: -12px;
-      min-width: 24px;
-      height: 24px;
-      background-color: white;
-      border-radius: 50%;
-      padding: 0;
+      top: 10px;
+      right: 6px;
 
       .isvg {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: black;
-
         svg {
-          width: 10px;
-          height: 10px;
-          fill: white;
-          margin-bottom: 1px;
+          width: 16px;
+          height: 16px;
+          fill: black;
         }
       }
     }
 
-    .modal-display-name-container {
-      height: 20px;
-      position: absolute;
-      bottom: 16px;
-      left: 8px;
-
-      .modal-display-name {
-        background: rgba(0, 0, 0, 0.8);
-        font-weight: 500;
-        color: white;
-        padding: 4px 8px;
-        border-top-right-radius: 8px;
-
-        &::first-letter {
-          text-transform: uppercase;
-        }
-      }
-    }
-
-    .modal-img {
-      width: 685px;
-      max-height: 517px;
-    }
-
-    .modal-info-container {
-      position: absolute;
-      bottom: -40px;
-      height: 48px;
-
-      .modal-title {
-        position: absolute;
-        font-weight: 500;
-        color: #ccc;
-
-        &::first-letter {
-          text-transform: uppercase;
-        }
-      }
-
-      .modal-counter {
-        position: absolute;
-        bottom: -8px;
-        font-weight: 500;
-        color: #999999;
-
-        &::first-letter {
-          text-transform: uppercase;
-        }
-      }
-    }
-
-    .modal-actions {
-      position: absolute;
-      bottom: 8px;
-      right: 8px;
+    .modal-content-body {
+      height: calc(100% - 64px);
       display: flex;
       align-items: center;
-      height: 40px;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 0 8px;
-      border-top-left-radius: 8px;
-      // opacity: 0;
-      // transition: opacity .7s ease-in-out;
 
-      .btn-action {
-        min-width: 32px;
-        height: 32px;
-        background-color: transparent;
-        box-shadow: none;
-        padding: 0;
-        margin-right: 16px;
+      .modal-img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
 
-        &:last-child {
-          margin-right: 0;
-        }
+    .modal-content-footer {
+      display: flex;
+      justify-content: center;
 
-        .isvg {
-          width: 28px;
-          height: 28px;
-
-          svg {
-            width: 28px;
-            height: 28px;
-            fill: rgba(204, 204, 204, 0.7);
-          }
-        }
-
-        &.is-disabled {
-          .isvg {
-            svg {
-              fill: rgba(204, 204, 204, 0.3);
-            }
-          }
+      .isvg {
+        svg {
+          width: 60px;
+          height: 60px;
         }
       }
     }

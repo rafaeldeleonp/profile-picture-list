@@ -7,15 +7,24 @@ import LikeSvg from '../../resources/svg/like.svg';
 import LogoThreeDots from '../../resources/svg/logo-three-dots.svg';
 
 interface ImageProps {
+  id: string;
   src: string;
   width: number;
   height: number;
   likes: number;
   comments: number;
-  onClick(): void;
+  onClick(id: string): void;
 }
 
-function Image({ src, width, height, likes, comments, onClick }: ImageProps) {
+function Image({
+  id,
+  src,
+  width,
+  height,
+  likes,
+  comments,
+  onClick,
+}: ImageProps) {
   const [isHovering, setHover] = useState(false);
   const [isLoading, setLoading] = useState(true);
   const imgCls = classnames('img', {
@@ -34,7 +43,7 @@ function Image({ src, width, height, likes, comments, onClick }: ImageProps) {
   };
 
   const handleClick = () => {
-    onClick();
+    onClick(id);
   };
 
   const handleLoad = () => {

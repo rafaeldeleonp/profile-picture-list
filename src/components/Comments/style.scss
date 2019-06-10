@@ -1,0 +1,51 @@
+.comments {
+  margin-left: 32px;
+
+  .user-profile {
+    justify-content: unset;
+    margin-bottom: 0;
+
+    .profile-img-container {
+      margin-right: 12px;
+
+      .profile-img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .user-info {
+      width: 80%;
+
+      .username-container {
+        margin-bottom: 8px;
+      }
+
+      .description-container {
+        p {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .list-title-container {
+    .title-header-content {
+      .three-dots-logo {
+        svg {
+          height: 40px;
+        }
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+}

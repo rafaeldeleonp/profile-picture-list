@@ -1,10 +1,10 @@
 import './style.scss';
 import React, { memo, useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import SVG from 'react-inlinesvg';
 import classnames from 'classnames';
-import LinearProgress from '../LinearProgress';
+import Comments from '../Comments';
 import CloseSVG from '../../resources/svg/close.svg';
+import ThreeDotsLogo from '../../resources/svg/logo-three-dots.svg';
 import LeftArrowSVG from '../../resources/svg/left-arrow.svg';
 import RightArrowSVG from '../../resources/svg/right-arrow.svg';
 
@@ -13,34 +13,31 @@ const INITIAL_STATE = {
   loaded: false,
 };
 
-interface Slides {
-  title: string;
+interface Data {
+  id: string;
   url: string;
-  displayName: string;
 }
 
 interface ModalProps {
   show?: boolean;
-  index?: number;
-  totalCount?: number;
-  slides: Slides[];
-  offset: number;
+  data: Data;
+  disableLeftArrow: boolean;
+  disableRightArrow: boolean;
+  handlePrevious(): void;
+  handleNext(): void;
   onClose(): void;
 }
 
 function Modal({
   show = false,
-  index = 0,
-  totalCount = 0,
-  slides,
-  offset,
+  data,
+  disableLeftArrow,
+  disableRightArrow,
+  handlePrevious,
+  handleNext,
   onClose,
 }: ModalProps) {
   const [state, setModalState] = useState(INITIAL_STATE);
-  const currentSlide =
-    slides.length > 0 ? slides[state.currentIndex] : undefined;
-  const isLeftArrowDisabled = state.currentIndex === 0;
-  const isRightArrowDisabled = state.currentIndex === slides.length - 1;
   const cls = classnames('modal-dialog', {
     'back-drop': show,
   });
@@ -49,15 +46,6 @@ function Modal({
     window.addEventListener('keyup', handleKeyUp);
     return () => removeListener();
   });
-
-  useEffect(() => {
-    setModalState({ ...state, currentIndex: index });
-  }, [index, state]);
-
-  // useEffect(() => {
-  //   if (props.slides.length - state.currentIndex <= 10)
-  //     props.fetch(offset);
-  // }, [state, state.currentIndex]);
 
   const removeListener = () => {
     window.removeEventListener('keyup', handleKeyUp);
@@ -74,12 +62,12 @@ function Modal({
 
     if (e.keyCode === 37) {
       // left-arrow
-      handlePreviousSlide();
+      handlePrevious();
     }
 
     if (e.keyCode === 39) {
       //right-arrow
-      handleNextSlide();
+      handleNext();
     }
   };
 
@@ -87,21 +75,7 @@ function Modal({
     setModalState({ ...state, loaded: true });
   };
 
-  const handlePreviousSlide = () => {
-    setModalState({
-      ...state,
-      currentIndex: (state.currentIndex - 1) % slides.length,
-      loaded: false,
-    });
-  };
-
-  const handleNextSlide = () => {
-    setModalState({
-      ...state,
-      currentIndex: (state.currentIndex + 1) % slides.length,
-      loaded: false,
-    });
-  };
+  console.log('CURRENT DATA', data);
 
   return (
     <div
@@ -111,32 +85,28 @@ function Modal({
         opacity: show ? 1 : 0,
       }}
     >
+      {!disableLeftArrow && (
+        <button className="left-btn" onClick={handlePrevious}>
+          <SVG src={LeftArrowSVG} />
+        </button>
+      )}
       <div className="modal-content">
         <button className="close-btn" onClick={onClose}>
           <SVG src={CloseSVG} />
         </button>
-        <LinearProgress loading={!state.loaded} />
-        {currentSlide && (
-          <div>
-            {currentSlide.displayName && (
-              <div className="modal-display-name-container">
-                <div className="modal-display-name">
-                  {currentSlide.displayName}
-                </div>
-              </div>
-            )}
-            <img
-              className="modal-img"
-              src={currentSlide.url}
-              alt="Modal img"
-              onLoad={handleImageLoad}
-            />
-            <div className="modal-info-container">
-              <div className="modal-title">{currentSlide.title}</div>
-            </div>
-          </div>
-        )}
+        <div className="modal-content-body">
+          <img className="modal-img" src={data.url} alt="Modal foto" />
+          <Comments />
+        </div>
+        <div className="modal-content-footer">
+          <SVG src={ThreeDotsLogo} />
+        </div>
       </div>
+      {!disableRightArrow && (
+        <button className="right-btn" onClick={handleNext}>
+          <SVG src={RightArrowSVG} />
+        </button>
+      )}
     </div>
   );
 }
