@@ -15,8 +15,6 @@ function ImageList({
   onClick,
   loadMoreItems,
 }: ImageListProps) {
-  console.log('WIDTH WIDTH', width);
-
   return (
     <div className="image-list">
       <InfiniteScroll pageStart={0} hasMore={hasMore} loadMore={loadMoreItems}>
@@ -33,6 +31,7 @@ function ImageList({
           for (let i = fromIndex; i < toIndex; i++) {
             items.push(
               <Image
+                key={data[i].id}
                 id={data[i].id}
                 src={data[i].width480}
                 likes={data[i].likes}
@@ -42,7 +41,11 @@ function ImageList({
             );
           }
 
-          return <div className="images-container">{items}</div>;
+          return (
+            <div key={index} className="images-container">
+              {items}
+            </div>
+          );
         })}
       </InfiniteScroll>
     </div>

@@ -2,13 +2,15 @@ import './style.scss';
 import React, { memo, useState, useEffect } from 'react';
 import SVG from 'react-inlinesvg';
 import classnames from 'classnames';
+import LRU from 'lru-cache';
 import Comments from '../Comments';
 import LoaderCircular from '../Loader/Circular';
 import CloseSVG from '../../resources/svg/close.svg';
-import ThreeDotsLogo from '../../resources/svg/logo-three-dots.svg';
 import LeftArrowSVG from '../../resources/svg/left-arrow.svg';
 import RightArrowSVG from '../../resources/svg/right-arrow.svg';
 import { CommentProps } from '../../components/Comments/comments-definitions';
+
+const cache = new LRU(100);
 
 interface Data {
   id: string;
@@ -55,24 +57,42 @@ function Modal({
       data: true,
       image: true,
     });
+    const hasCache = cache.has(stateData.id);
 
-    setTimeout(function() {
-      fetch('/data/comments.json')
-        .then(res => res.json())
-        .then(data => {
-          const randomIndex = Math.floor(Math.random() * 3);
+    //if cache  doesnt exists, simulate fetch
+    if (!hasCache) {
+      setTimeout(function() {
+        fetch('/data/comments.json')
+          .then(res => res.json())
+          .then(data => {
+            const randomIndex = Math.floor(Math.random() * 3);
+            const newData = {
+              ...stateData,
+              comments: data[randomIndex].comments,
+            };
 
-          setData({
-            ...stateData,
-            comments: data[randomIndex].comments,
+            cache.set(stateData.id, newData);
+
+            setData(newData);
+
+            setLoading({
+              data: false,
+              image: loading.image,
+            });
           });
+      }, Math.floor(Math.random() * 2000));
+    } else if (hasCache) {
+      const data = cache.get(stateData.id);
 
-          setLoading({
-            data: false,
-            image: loading.image,
-          });
-        });
-    }, Math.floor(Math.random() * 2000));
+      console.log('DATA', data);
+
+      setData(data);
+
+      setLoading({
+        data: false,
+        image: loading.image,
+      });
+    }
   }, [data.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
