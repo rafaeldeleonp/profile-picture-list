@@ -14,6 +14,12 @@
   }
 }
 
+@media only screen and (max-width: 1920px) {
+  .image-list {
+    width: 48%;
+  }
+}
+
 @media only screen and (max-width: 1500px) {
   .image-list {
     width: 70%;
