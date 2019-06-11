@@ -65,8 +65,9 @@ function Comment({ profileSrc, name, content, replies }: CommentProps) {
       </div>
       {replyState.clickCounter > 0 && (
         <div className="comment-replies-container">
-          {replyState.replies.map(reply => (
+          {replyState.replies.map((reply, index) => (
             <Reply
+              key={index}
               profileSrc={reply.profileSrc}
               name={reply.name}
               content={reply.content}
