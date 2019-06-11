@@ -29,7 +29,7 @@ function UserInfo({
           <div className="name">{name}</div>
           <div className="username">{username}</div>
         </div>
-        {hideStadistics && (
+        {!hideStadistics && (
           <div className="stadistics-container">
             <div className="posts-container">
               <span className="number">{posts}</span>

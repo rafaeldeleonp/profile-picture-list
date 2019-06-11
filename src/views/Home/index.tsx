@@ -106,7 +106,7 @@ function Home() {
         username="@rafaeldeleonp"
         posts={50}
         followers={125}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim tempor arcu, sit amet varius ex ullamcorper quis. Suspendisse sit amet dignissim ante, eget venenatis velit. Donec sit amet rhoncus magna. Integer in suscipit sapien, sodales lobortis libero. Praesent eu arcu feugiat, consectetur dui nec, ultrices diam. Nulla feugiat ac."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim tempor arcu, sit amet varius ex ullamcorper quis. "
       />
       <ListTitle title="posts" />
       <div style={{ display: 'flex', justifyContent: 'center' }}>

@@ -31,6 +31,7 @@ function Comments({ data }: CommentsProps) {
         username="@rafaeldeleonp"
         posts={50}
         followers={125}
+        hideStadistics={true}
         description="This is the description of the photo. Photo description pushes content below."
       />
       <div className="comments-container">
