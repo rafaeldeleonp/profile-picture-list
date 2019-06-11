@@ -1,17 +1,12 @@
 .image-list {
-  overflow: hidden;
-
-  &:focus {
-    outline: none;
-  }
+  width: 58%;
 
   .images-container {
     display: inline-flex;
     justify-content: center;
 
-    .img {
+    .image-wrapper {
       display: flex;
-      margin-right: 28px;
 
       &:last-child {
         margin-right: 0;

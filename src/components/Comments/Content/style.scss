@@ -1,4 +1,5 @@
 .content-wrapper {
+  width: 70%;
   margin-left: 8px;
   margin-right: 8px;
 
@@ -12,6 +13,12 @@
   .content-message {
     margin: 0;
     font-size: 14px;
+  }
+
+  .content-loader-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
   }
 
   .content-replies-btn {

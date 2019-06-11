@@ -16,14 +16,7 @@ function ProfilePicture({ src }: ProfilePictureProps) {
     setLoading(false);
   };
 
-  return (
-    <img
-      className={imgCls}
-      src="/images/profile.png"
-      alt="Profile"
-      onLoad={handleLoad}
-    />
-  );
+  return <img className={imgCls} src={src} alt="Profile" onLoad={handleLoad} />;
 }
 
 export default ProfilePicture;

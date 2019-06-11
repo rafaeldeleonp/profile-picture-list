@@ -1,6 +1,6 @@
 import React, { Suspense, memo, lazy } from 'react';
 import SVG from 'react-inlinesvg';
-import LinearProgress from './components/LinearProgress';
+import LinearLoader from './components/Loader/Linear';
 import LogoWhite from './resources/svg/logo-white.svg';
 
 const Home = lazy(() => import('./views//Home'));
@@ -12,7 +12,7 @@ function App() {
         <SVG className="logo" src={LogoWhite} />
       </header>
       <div className="app-body">
-        <Suspense fallback={<LinearProgress />}>
+        <Suspense fallback={<LinearLoader />}>
           <Home />
         </Suspense>
       </div>

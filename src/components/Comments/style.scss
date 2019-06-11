@@ -31,27 +31,8 @@
     }
   }
 
-  .list-title-container {
-    justify-content: unset;
-    margin-bottom: 20px;
-    padding-left: 72px;
-
-    .title-header-content {
-      .three-dots-logo {
-        svg {
-          height: 40px;
-        }
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      .dot {
-        width: 6px;
-        height: 6px;
-      }
-    }
+  .comments-container {
+    margin-left: 30px;
   }
 
   .load-more-container {

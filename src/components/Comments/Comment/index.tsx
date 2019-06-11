@@ -13,9 +13,17 @@ function Comment({ profileSrc, name, content, replies }: CommentProps) {
     replies: [],
     clickCounter: 0,
     total: replies.length,
+    loading: false,
   });
 
   const loadMoreReplies = () => {
+    setReplyState({
+      replies: replyState.replies,
+      clickCounter: replyState.clickCounter,
+      total: replyState.total,
+      loading: true,
+    });
+
     const value = replyState.total - REPLIES_LIMIT;
     let total = replyState.total;
     let counter = replyState.clickCounter;
@@ -31,11 +39,14 @@ function Comment({ profileSrc, name, content, replies }: CommentProps) {
     const startIndex =
       replyState.replies.length === 0 ? replies.length - REPLIES_LIMIT : total;
 
-    setReplyState({
-      replies: replies.slice(startIndex, replies.length),
-      clickCounter: counter,
-      total: total,
-    });
+    setTimeout(function() {
+      setReplyState({
+        replies: replies.slice(startIndex, replies.length),
+        clickCounter: counter,
+        total: total,
+        loading: false,
+      });
+    }, Math.floor(Math.random() * 1500));
   };
 
   return (
@@ -45,6 +56,7 @@ function Comment({ profileSrc, name, content, replies }: CommentProps) {
         <Content
           name={name}
           content={content}
+          loadingReplies={replyState.loading}
           totalReplies={replyState.total}
           counter={replyState.clickCounter}
           loadMoreReplies={loadMoreReplies}

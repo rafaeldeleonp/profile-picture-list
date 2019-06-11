@@ -65,10 +65,10 @@ function Image({
         height={height}
         onLoad={handleLoad}
       />
-      <div
+      {/* <div
         style={{ width: `${width}px`, height: `${height}px` }}
         className={overlayCls}
-      />
+      /> */}
       {isHovering && (
         <div
           className="icons-overlay-container"

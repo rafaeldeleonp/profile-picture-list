@@ -8,7 +8,8 @@ export interface Image {
 
 export interface ImageListProps {
   data: Image[];
-  itemCount: number;
+  isFetching: boolean;
+  hasMore: boolean;
   onClick(id: string): void;
   loadMoreItems(startIndex: number, stopIndex: number): void;
 }
@@ -19,4 +20,5 @@ export interface WindowScrollerProps {
 
 export interface AutoSizerProps {
   width: number;
+  height: number;
 }
