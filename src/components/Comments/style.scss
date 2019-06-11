@@ -1,6 +1,5 @@
 .comments {
   padding: 0 20px 0 32px;
-  overflow: auto;
 
   .user-profile {
     justify-content: unset;
@@ -51,5 +50,11 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .comments {
+    padding: 0 10px;
   }
 }

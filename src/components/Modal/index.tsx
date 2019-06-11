@@ -62,8 +62,6 @@ function Modal({
         .then(data => {
           const randomIndex = Math.floor(Math.random() * 3);
 
-          console.log('RANDOM INDEX', randomIndex);
-
           setData({
             ...stateData,
             comments: data[randomIndex].comments,
@@ -122,7 +120,7 @@ function Modal({
         opacity: show ? 1 : 0,
       }}
     >
-      {!disableLeftArrow && (
+      {!disableLeftArrow && !loadingStatus && (
         <button className="left-btn" onClick={handlePrevious}>
           <SVG src={LeftArrowSVG} />
         </button>
@@ -141,20 +139,24 @@ function Modal({
             <SVG src={CloseSVG} />
           </button>
           <div className="modal-content-body">
-            <img
-              className="modal-img"
-              src={data.url}
-              alt="Modal foto"
-              onLoad={handleImageLoad}
-            />
-            <Comments data={stateData.comments} />
+            <div className="img-wrapper">
+              <img
+                className="modal-img"
+                src={data.url}
+                alt="Modal foto"
+                onLoad={handleImageLoad}
+              />
+            </div>
+            <div className="modal-comments-container">
+              <Comments data={stateData.comments} />
+            </div>
           </div>
-          <div className="modal-content-footer">
+          {/* <div className="modal-content-footer">
             <SVG src={ThreeDotsLogo} />
-          </div>
+          </div> */}
         </div>
       )}
-      {!disableRightArrow && (
+      {!disableRightArrow && !loadingStatus && (
         <button className="right-btn" onClick={handleNext}>
           <SVG src={RightArrowSVG} />
         </button>

@@ -1,5 +1,5 @@
 import './style.scss';
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import ProfilePicture from '../../ProfilePicture';
 import Content from '../Content';
 import LikeBtn from '../LikeBtn';
@@ -78,4 +78,4 @@ function Comment({ profileSrc, name, content, replies }: CommentProps) {
   );
 }
 
-export default Comment;
+export default memo(Comment);

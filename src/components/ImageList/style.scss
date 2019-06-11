@@ -1,9 +1,8 @@
 .image-list {
-  width: 58%;
+  width: 55%;
 
   .images-container {
     display: inline-flex;
-    justify-content: center;
 
     .image-wrapper {
       display: flex;
@@ -12,5 +11,77 @@
         margin-right: 0;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .image-list {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .image-list {
+    width: 78%;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .image-list {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .image-list {
+    width: 91%;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .image-list {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .image-list {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .image-list {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .image-list {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .image-list {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .image-list {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .image-list {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .image-list {
+    width: 80%;
   }
 }

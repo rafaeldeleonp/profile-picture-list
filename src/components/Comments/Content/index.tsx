@@ -1,5 +1,5 @@
 import './style.scss';
-import React from 'react';
+import React, { memo } from 'react';
 import SVG from 'react-inlinesvg';
 import ThreeDotsLogo from '../../../resources/svg/logo-three-dots.svg';
 import LoaderCircular from '../../Loader/Circular';
@@ -38,4 +38,4 @@ function Content({
   );
 }
 
-export default Content;
+export default memo(Content);

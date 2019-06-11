@@ -1,5 +1,5 @@
 import './style.scss';
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import classnames from 'classnames';
 import SVG from 'react-inlinesvg';
 import LikeSVG from '../../../resources/svg/like.svg';
@@ -22,4 +22,4 @@ function LikeBtn() {
   );
 }
 
-export default LikeBtn;
+export default memo(LikeBtn);

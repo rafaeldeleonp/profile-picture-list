@@ -1,5 +1,5 @@
 import './style.scss';
-import React from 'react';
+import React, { memo } from 'react';
 import ProfilePicture from '../ProfilePicture';
 
 interface UserInfoProps {
@@ -49,4 +49,4 @@ function UserInfo({
   );
 }
 
-export default UserInfo;
+export default memo(UserInfo);

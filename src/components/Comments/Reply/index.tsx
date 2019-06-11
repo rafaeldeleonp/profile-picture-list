@@ -1,5 +1,5 @@
 import './style.scss';
-import React from 'react';
+import React, { memo } from 'react';
 import ProfilePicture from '../../ProfilePicture';
 import Content from '../Content';
 import LikeBtn from '../LikeBtn';
@@ -15,4 +15,4 @@ function Reply({ profileSrc, name, content }: BaseCommentProps) {
   );
 }
 
-export default Reply;
+export default memo(Reply);

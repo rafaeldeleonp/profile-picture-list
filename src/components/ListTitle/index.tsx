@@ -1,5 +1,5 @@
 import './style.scss';
-import React from 'react';
+import React, { memo } from 'react';
 import SVG from 'react-inlinesvg';
 import LogoThreeDots from '../../resources/svg/logo-three-dots.svg';
 
@@ -19,4 +19,4 @@ function ListTitle({ title }: ListTitleProps) {
   );
 }
 
-export default ListTitle;
+export default memo(ListTitle);

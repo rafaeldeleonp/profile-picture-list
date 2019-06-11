@@ -15,7 +15,6 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 const INITIAL_STATE: InitialState = {
   data: [],
-  isFetching: false,
   hasMore: false,
 };
 
@@ -45,7 +44,7 @@ function Home() {
             return {
               id: uuid(),
               width480: images['480w_still'].url,
-              preview: images.fixed_height_small_still.url,
+              original: images.original_still.url,
               likes: Math.floor(Math.random() * 99),
               comments: Math.floor(Math.random() * 99),
             };
@@ -53,19 +52,18 @@ function Home() {
 
           setImages({
             data: images.data.concat(newImages),
-            isFetching: false,
             hasMore: gifs.pagination.count !== gifs.pagination.total_count,
           });
         })
         .catch(err => {
-          setImages({ ...images, isFetching: false });
+          setImages({ ...images });
           console.log('Fetch Error', err);
         });
     });
   };
 
   useEffect(() => {
-    setImages({ ...images, isFetching: true });
+    setImages({ ...images });
 
     fetchImages();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -114,7 +112,6 @@ function Home() {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <ImageList
           data={images.data}
-          isFetching={images.isFetching}
           hasMore={images.hasMore}
           onClick={handleClick}
           loadMoreItems={loadMoreItems}
@@ -125,7 +122,7 @@ function Home() {
           show={showModal}
           data={{
             id: images.data[currentIndex].id,
-            url: images.data[currentIndex].width480,
+            url: images.data[currentIndex].original,
           }}
           disableLeftArrow={isLeftArrowDisabled}
           disableRightArrow={isRightArrowDisabled}

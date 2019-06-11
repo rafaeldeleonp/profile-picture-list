@@ -1,5 +1,5 @@
 import './style.scss';
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import classnames from 'classnames';
 
 interface ProfilePictureProps {
@@ -19,4 +19,4 @@ function ProfilePicture({ src }: ProfilePictureProps) {
   return <img className={imgCls} src={src} alt="Profile" onLoad={handleLoad} />;
 }
 
-export default ProfilePicture;
+export default memo(ProfilePicture);

@@ -1,35 +1,40 @@
 import './style.scss';
-import React from 'react';
+import React, { memo } from 'react';
+import withWidth from '@material-ui/core/withWidth'; //juat using this util
 import InfiniteScroll from 'react-infinite-scroller';
 import Image from '../Image';
-import { ImageListProps, AutoSizerProps } from './imagelist-definitions';
+import { ImageListProps } from './imagelist-definitions';
 
-const IMAGE_SIZE = 300;
-const MARGIN_BOTTOM = 28;
+const SMALL = 'sm';
+const XSMALL = 'xs';
 
 function ImageList({
+  width,
   data,
-
-  isFetching,
   hasMore,
   onClick,
   loadMoreItems,
 }: ImageListProps) {
+  console.log('WIDTH WIDTH', width);
+
   return (
     <div className="image-list">
       <InfiniteScroll pageStart={0} hasMore={hasMore} loadMore={loadMoreItems}>
         {data.map((item, index) => {
           const items = [];
-          const fromIndex = index * 3;
-          const toIndex = Math.min(fromIndex + 3, data.length);
+          let itemPerRow = 3;
+
+          if (width === SMALL) itemPerRow = 2;
+          else if (width === XSMALL) itemPerRow = 1;
+
+          const fromIndex = index * itemPerRow;
+          const toIndex = Math.min(fromIndex + itemPerRow, data.length);
 
           for (let i = fromIndex; i < toIndex; i++) {
             items.push(
               <Image
                 id={data[i].id}
                 src={data[i].width480}
-                width={IMAGE_SIZE}
-                height={IMAGE_SIZE}
                 likes={data[i].likes}
                 comments={data[i].comments}
                 onClick={onClick}
@@ -68,4 +73,4 @@ function ImageList({
   // );
 }
 
-export default ImageList;
+export default withWidth()(memo(ImageList));
