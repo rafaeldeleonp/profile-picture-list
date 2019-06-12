@@ -57,7 +57,7 @@ function Modal({
       data: true,
       image: true,
     });
-    const hasCache = cache.has(stateData.id);
+    const hasCache = cache.has(data.id);
 
     //if cache  doesnt exists, simulate fetch
     if (!hasCache) {

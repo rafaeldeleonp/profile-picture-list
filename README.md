@@ -1,4 +1,4 @@
-# GIF Store
+# Picturify
 
 ReactJS application using Giphy API (https://github.com/Giphy/GiphyAPI).
 
