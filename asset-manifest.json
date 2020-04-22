@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/profile-picture-list/static/css/main.9c2a0252.chunk.css",
+    "main.js": "/profile-picture-list/static/js/main.90c19cf3.chunk.js",
+    "main.js.map": "/profile-picture-list/static/js/main.90c19cf3.chunk.js.map",
+    "runtime~main.js": "/profile-picture-list/static/js/runtime~main.19c46c59.js",
+    "runtime~main.js.map": "/profile-picture-list/static/js/runtime~main.19c46c59.js.map",
+    "static/css/2.5ec480d0.chunk.css": "/profile-picture-list/static/css/2.5ec480d0.chunk.css",
+    "static/js/2.868cb881.chunk.js": "/profile-picture-list/static/js/2.868cb881.chunk.js",
+    "static/js/2.868cb881.chunk.js.map": "/profile-picture-list/static/js/2.868cb881.chunk.js.map",
+    "static/css/3.2a15a4ab.chunk.css": "/profile-picture-list/static/css/3.2a15a4ab.chunk.css",
+    "static/js/3.ced931c2.chunk.js": "/profile-picture-list/static/js/3.ced931c2.chunk.js",
+    "static/js/3.ced931c2.chunk.js.map": "/profile-picture-list/static/js/3.ced931c2.chunk.js.map",
+    "static/js/4.dea31c10.chunk.js": "/profile-picture-list/static/js/4.dea31c10.chunk.js",
+    "static/js/4.dea31c10.chunk.js.map": "/profile-picture-list/static/js/4.dea31c10.chunk.js.map",
+    "index.html": "/profile-picture-list/index.html",
+    "precache-manifest.8b03709688fbc7747a02a8f04ecf6c2b.js": "/profile-picture-list/precache-manifest.8b03709688fbc7747a02a8f04ecf6c2b.js",
+    "service-worker.js": "/profile-picture-list/service-worker.js",
+    "static/css/2.5ec480d0.chunk.css.map": "/profile-picture-list/static/css/2.5ec480d0.chunk.css.map",
+    "static/css/3.2a15a4ab.chunk.css.map": "/profile-picture-list/static/css/3.2a15a4ab.chunk.css.map",
+    "static/css/main.9c2a0252.chunk.css.map": "/profile-picture-list/static/css/main.9c2a0252.chunk.css.map",
+    "static/media/close.svg": "/profile-picture-list/static/media/close.1f50fe83.svg",
+    "static/media/left-arrow.svg": "/profile-picture-list/static/media/left-arrow.f722c6cc.svg",
+    "static/media/like.svg": "/profile-picture-list/static/media/like.973ec4e8.svg",
+    "static/media/load-more.svg": "/profile-picture-list/static/media/load-more.79822038.svg",
+    "static/media/logo-three-dots.svg": "/profile-picture-list/static/media/logo-three-dots.04ea420e.svg",
+    "static/media/logo-white.svg": "/profile-picture-list/static/media/logo-white.c9f8793a.svg",
+    "static/media/right-arrow.svg": "/profile-picture-list/static/media/right-arrow.c3fe7f18.svg"
+  }
+}
