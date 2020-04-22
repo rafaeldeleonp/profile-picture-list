@@ -8,7 +8,7 @@ import { CommentProps, RepliesState } from '../comments-definitions';
 
 const REPLIES_LIMIT = 3;
 
-function Comment({ profileSrc, name, content, replies }: CommentProps) {
+function Comment({ profile, name, content, replies }: CommentProps) {
   const [replyState, setReplyState] = useState<RepliesState>({
     replies: [],
     clickCounter: 0,
@@ -52,7 +52,7 @@ function Comment({ profileSrc, name, content, replies }: CommentProps) {
   return (
     <div className="comment">
       <div className="comment-wrapper">
-        <ProfilePicture src={profileSrc}></ProfilePicture>
+        <ProfilePicture src={profile}></ProfilePicture>
         <Content
           name={name}
           content={content}
@@ -68,7 +68,7 @@ function Comment({ profileSrc, name, content, replies }: CommentProps) {
           {replyState.replies.map((reply, index) => (
             <Reply
               key={index}
-              profileSrc={reply.profileSrc}
+              profile={reply.profile}
               name={reply.name}
               content={reply.content}
             />

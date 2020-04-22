@@ -2,211 +2,211 @@
   {
     "comments": [
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut.",
         "replies": [
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           },
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           },
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut."
           },
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut."
           },
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "8 - this is a long reply. Here you can see it is long"
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt.",
         "replies": [
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros."
           },
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing."
           },
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           },
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros.",
         "replies": [
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras libero mauris, venenatis vel congue non, lobortis non nulla. In sodales ex vel mauris ultrices condimentum.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras libero mauris, venenatis vel congue non, lobortis non nulla. In sodales ex vel mauris ultrices condimentum.",
         "replies": []
@@ -216,104 +216,104 @@
   {
     "comments": [
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus.",
         "replies": [
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt."
           },
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut."
           },
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum.",
         "replies": [
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           },
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros.",
         "replies": [
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras libero mauris, venenatis vel congue non, lobortis non nulla. In sodales ex vel mauris ultrices condimentum.",
         "replies": []
@@ -323,159 +323,159 @@
   {
     "comments": [
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut.",
         "replies": [
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           },
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut."
           },
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut."
           },
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "8 - this is a long reply. Here you can see it is long"
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt.",
         "replies": [
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros."
           },
           {
-            "profileSrc": "/images/profile2.png",
+            "profile": "profile2",
             "name": "ana maria gonzalez",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing."
           },
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros."
           },
           {
-            "profileSrc": "/images/profile3.png",
+            "profile": "profile3",
             "name": "jose javier asilis",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           },
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu luctus augue, in tempor eros. Nam fermentum accumsan tortor, ut.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros.",
         "replies": [
           {
-            "profileSrc": "/images/profile1.png",
+            "profile": "profile1",
             "name": "rafael de leon",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed."
           }
         ]
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus iaculis eros.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac maximus magna. Suspendisse mattis metus.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile1.png",
+        "profile": "profile1",
         "name": "rafael de leon",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras libero mauris, venenatis vel congue non, lobortis non nulla. In sodales ex vel mauris ultrices condimentum.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile3.png",
+        "profile": "profile3",
         "name": "jose javier asilis",
         "content": "Lorem ipsum dolor.",
         "replies": []
       },
       {
-        "profileSrc": "/images/profile2.png",
+        "profile": "profile2",
         "name": "ana maria gonzalez",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras libero mauris, venenatis vel congue non, lobortis non nulla. In sodales ex vel mauris ultrices condimentum.",
         "replies": []

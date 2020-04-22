@@ -2,6 +2,7 @@
   "name": "profile-picture-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://rafaeldeleonp.github.io/profile-picture-list/",
   "dependencies": {
     "@material-ui/core": "^4.1.0",
     "@types/lodash": "^4.14.134",
@@ -22,10 +23,13 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.18.2",
     "typescript": "^3.5.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -2,6 +2,8 @@
 
 ReactJS application using Giphy API (https://github.com/Giphy/GiphyAPI).
 
+You can see the app here (https://rafaeldeleonp.github.io/profile-picture-list/).
+
 ## Getting started
 
 To install app, you may choose one of the following methods:

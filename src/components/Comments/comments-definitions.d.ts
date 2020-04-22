@@ -1,5 +1,5 @@
 export interface BaseCommentProps {
-  profileSrc: string;
+  profile: string;
   name: string;
   content: string;
 }

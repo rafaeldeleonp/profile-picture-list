@@ -38,7 +38,7 @@ function Comments({ data }: CommentsProps) {
         {comments.map((comment, index) => (
           <Comment
             key={index}
-            profileSrc={comment.profileSrc}
+            profile={comment.profile}
             name={comment.name}
             content={comment.content}
             replies={comment.replies}

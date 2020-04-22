@@ -5,10 +5,10 @@ import Content from '../Content';
 import LikeBtn from '../LikeBtn';
 import { BaseCommentProps } from '../comments-definitions';
 
-function Reply({ profileSrc, name, content }: BaseCommentProps) {
+function Reply({ profile, name, content }: BaseCommentProps) {
   return (
     <div className="reply">
-      <ProfilePicture src={profileSrc}></ProfilePicture>
+      <ProfilePicture src={profile}></ProfilePicture>
       <Content name={name} content={content} />
       <LikeBtn />
     </div>

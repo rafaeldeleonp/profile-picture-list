@@ -22,7 +22,7 @@ function UserInfo({
   return (
     <div className="user-profile">
       <div className="profile-img-container">
-        <ProfilePicture src="/images/profile1.png" />
+        <ProfilePicture src="profile1" />
       </div>
       <div className="user-info">
         <div className="username-container">
